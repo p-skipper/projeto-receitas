@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="/login.css" />
-    <title>tela de login</title>
+    <title>criar conta</title>
   </head>
 
   <body>
@@ -13,22 +13,20 @@
       <img src="logo-horizontal.png" class="logo" />
     </a>
 
-    <!-- Seção principal onde o formulário de login será exibido -->
     <main class="flex-col align-center">
+      <!-- Seção principal para criação de nova conta -->
       <section class="container container-de-cima align-center flex-col">
-        <h2>Faça login na sua conta</h2>
+        <h2>Criar uma nova conta</h2>
 
-        <!-- Mensagem de confirmação que aparecerá após o login bem-sucedido -->
+        <!-- Mensagem de confirmação que aparecerá quando a conta for criada com sucesso -->
         <div
           id="confirmationMessage"
           class="confirmationMessage mb20 text-center invisible"
         >
-          <span
-            >Em breve você deverá receber um e-mail com mais instruções.</span
-          >
+          <span>Conta criada com sucesso, já pode realizar o login.</span>
         </div>
 
-        <!-- Formulário de login -->
+        <!-- Formulário para inserir os dados para criação da conta -->
         <form id="loginForm" class="flex-col" autocomplete="off">
           <div class="mb20">
             <label class="mb5" for="email">E-mail</label>
@@ -38,8 +36,8 @@
               id="email"
               placeholder="Informe o seu e-mail"
             />
+            <!-- Espaço para exibição de erros relacionados ao e-mail -->
             <span class="error" id="errorEmail"></span>
-            <!-- Mensagem de erro do e-mail -->
           </div>
 
           <div>
@@ -50,21 +48,15 @@
               id="password"
               placeholder="Informe a sua senha"
             />
+            <!-- Espaço para exibição de erros relacionados à senha -->
             <span class="error" id="errorPassword"></span>
-            <!-- Mensagem de erro da senha -->
           </div>
 
           <div class="details mb30">
-            <div class="rememberMe">
-              <label for="rememberMe">Lembrar de mim</label>
-              <input type="checkbox" id="rememberMe" />
-            </div>
-            <a href="recuperacao_senha.html" class="esqueceuSenha"
-              >Esqueceu sua senha?</a
-            >
+            <a href="login.html" class="esqueceuSenha">« Voltar para o login</a>
           </div>
 
-          <button class="mb30" type="submit">Entrar</button>
+          <button class="mb30" type="submit">Registrar</button>
         </form>
       </section>
 
@@ -74,5 +66,5 @@
     </main>
   </body>
 
-  <script src="login.js"></script>
+  <script src="criar_conta.js"></script>
 </html>

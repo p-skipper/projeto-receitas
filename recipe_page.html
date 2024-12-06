@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="recipe_page.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+    <title>Receitas</title>
+  </head>
+  <body>
+    <header class="header">
+      <div class="logo-container">
+        <!-- Logo da aplicação com link para a página inicial -->
+        <a href="index.html">
+          <img src="logo-horizontal.png" class="logo" />
+        </a>
+      </div>
+    </header>
+
+    <!-- Seção de filtro e busca -->
+    <div class="row">
+      <h2>Receitas</h2>
+      <!-- Campo de busca para filtrar as receitas -->
+      <input type="text" placeholder="Pesquisar..." class="input" />
+      
+      <div>
+        <i id="bookmark-filter" class="fas fa-bookmark icon"></i>
+      </div>
+      
+      <div>
+        <i id="filter-icon" class="fas fa-filter icon"></i>
+      </div>
+    </div>
+
+    <!-- Modal para filtros -->
+    <div id="filter-modal" class="modal">
+      <div class="modal-content">
+        <span class="close" id="close-modal">&times;</span>
+        <h2>Filtrar Receitas</h2>
+
+        <!-- Filtro por categoria -->
+        <label for="category-filter">Categoria:</label>
+        <select id="category-filter">
+          <option value="">Todas</option>
+          <option value="Café">Café</option>
+          <option value="Acompanhamento">Acompanhamento</option>
+          <option value="Doce">Doce</option>
+          <option value="Principal">Principal</option>
+        </select>
+
+        <!-- Filtro por dificuldade -->
+        <label for="difficulty-filter">Dificuldade:</label>
+        <select id="difficulty-filter">
+          <option value="">Todas</option>
+          <option value="Fácil">Fácil</option>
+          <option value="Médio">Médio</option>
+          <option value="Difícil">Difícil</option>
+        </select>
+
+        <!-- Filtro por tempo de preparo -->
+        <label for="time-filter">Tempo:</label>
+        <select id="time-filter">
+          <option value="">Todos</option>
+          <option value="0-5">0-5 min</option>
+          <option value="5-15">5-15 min</option>
+          <option value="15-30">15-30 min</option>
+          <option value="30+">30+ min</option>
+        </select>
+
+        <button id="apply-filters">Aplicar Filtros</button>
+      </div>
+    </div>
+
+    <!-- Container onde as receitas serão exibidas -->
+    <div class="container">
+      <div id="recipe-container"></div> 
+    </div>
+
+    <script src="recipe_page.js"></script>
+  </body>
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="login.css" />
+    <title>recuperacao de senha</title>
+  </head>
+
+  <body>
+    <!-- Logo da aplicação com link para a home -->
+    <a href="index.html">
+      <img src="logo-horizontal.png" class="logo" />
+    </a>
+
+    <main class="flex-col align-center">
+      <section class="container container-de-cima align-center flex-col">
+        <h2>Esqueceu sua senha?</h2>
+
+        <!-- Formulário para inserir o e-mail e recuperar a senha -->
+        <form id="forgotPasswordForm" class="flex-col" autocomplete="off">
+          <div class="mb10">
+            <label class="mb5" for="emailPasswordForm">E-mail</label>
+            <input
+              class="outline"
+              type="email"
+              id="emailPasswordForm"
+              placeholder="Informe o seu e-mail"
+            />
+            <!-- Espaço para exibição de erros -->
+            <span class="error" id="errorEmailPasswordForm"></span>
+          </div>
+
+          <div class="details mb30">
+            <a href="login.html">« Voltar para o login </a>
+          </div>
+
+          <button class="mb20" type="submit">Entrar</button>
+        </form>
+      </section>
+
+      <section class="container container-de-baixo text-center flex-col">
+        <div class="instructionMessage text-center">
+          <span
+            >Insira seu endereço de e-mail e enviaremos instruções sobre como
+            criar uma nova senha.</span
+          >
+        </div>
+      </section>
+    </main>
+  </body>
+
+  <script src="recuperacao_senha.js"></script>
+</html>
