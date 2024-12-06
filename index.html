@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="index.css" />
+    <title>Dicionário HTML</title>
+  </head>
+  <body>
+    <header class="header">
+      <img src="logo-horizontal.png" class="logo" />
+
+      <input type="text" placeholder="Pesquisar..." />
+
+      <!-- Container de autenticação (login/logout) -->
+      <div id="auth-container">
+        <!-- Link para a página de login -->
+        <a id="login-link" href="login.html">
+          <button id="login-button" class="buttonLogin">Login</button>
+        </a>
+        <!-- Botão de logout (inicialmente escondido) -->
+        <button
+          id="logout-button"
+          class="buttonLogin"
+          style="display: none"
+          onclick="logout()"
+        >
+          Logout
+        </button>
+      </div>
+    </header>
+
+    <!-- Carrossel de receitas -->
+    <div class="carousel-container">
+      <div class="carousel">
+        <img id="carousel-image" src="" alt="Recipe Image" />
+      </div>
+      <button class="prev carousel-button">&#10094;</button>
+      <button class="next carousel-button">&#10095;</button>
+    </div>
+
+    <!-- Seção de categorias de receitas -->
+    <div class="categoria-container">
+      <!-- Botões para filtrar as receitas por categoria -->
+      <button class="categoria-button" onclick="navigateWithFilter('Café')">
+        Lanche
+      </button>
+      <button
+        class="categoria-button"
+        onclick="navigateWithFilter('Principal')"
+      >
+        Principal
+      </button>
+      <button
+        class="categoria-button"
+        onclick="navigateWithFilter('Acompanhamento')"
+      >
+        Acompanhamento
+      </button>
+      <button class="categoria-button" onclick="navigateWithFilter('Doce')">
+        Doce
+      </button>
+      <!-- Link para a página com todas as receitas -->
+      <a href="recipe_page.html">
+        <button class="categoria-button">Todas</button>
+      </a>
+    </div>
+
+    <h2 class="title">Destaques</h2>
+
+    <!-- Container onde as receitas em destaque serão exibidas -->
+    <div id="recipe-container" class="recipe-container"></div>
+
+    <div style="padding: 20px;"></div>
+    <script src="index.js"></script>
+  </body>
+</html>
